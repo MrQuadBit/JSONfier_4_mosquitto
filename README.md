@@ -5,9 +5,13 @@ This code helps to create JSON strings for [mosquitto](https://mosquitto.org/)
 Python 3.6 or greater
 
 **For use:**
-git clone https://github.com/MrQuadBit/JSONfier_4_mosquitto.git \ 
-cd JSONfier_4_mosquitto \ 
-python main.py \ 
+
+git clone https://github.com/MrQuadBit/JSONfier_4_mosquitto.git
+
+cd JSONfier_4_mosquitto 
+
+python main.py
+
 
 -then just insert pairs Key-Value separated by white spaces and hit enter between each pair
 
