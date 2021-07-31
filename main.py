@@ -1,16 +1,13 @@
 def main():
-	#CLI Tool
+	cliTool()
+
+def cliTool():
+	#Variables
 	item = ""
 	json = {}
 
 	#Instructions
-	print("----------------------------------------------------------------------------")
-	print("Ingresa la clave y el valor separados por un espacio, e.g.")
-	print("\nID 1234")
-	print("Nombre Fulano")
-	print("mnsg Hola mundo con JSON")
-	print("JSON ->  {'ID': '1234', 'Nombre': 'Fulano', 'mnsg': 'Hola mundo con JSON'}\n")
-	print("**Para salir ingresa la letra 'C' o 'c'**", end="\n\n")
+	instructions()
 
 	#Getting and filling the JSON
 	while(True):
@@ -20,7 +17,7 @@ def main():
 		if(item == 'C' or item == "c"):
 			break
 
-		#Creating dictionary
+		#Creating dictionary and parsing JSON
 		item = item.split()
 		json[item[0]] = " ".join(item[1:])
 
@@ -33,5 +30,15 @@ def main():
 		print(str(json).replace("\'", "\\\""))
 	else:
 		print(str(json).replace("\'", "\""))
+
+def instructions():
+	print("----------------------------------------------------------------------------")
+	print("Ingresa la clave y el valor separados por un espacio, e.g.")
+	print("\nID 1234")
+	print("Nombre Fulano")
+	print("mnsg Hola mundo con JSON")
+	print("JSON ->  {'ID': '1234', 'Nombre': 'Fulano', 'mnsg': 'Hola mundo con JSON'}\n")
+	print("**Para salir ingresa la letra 'C' o 'c'**", end="\n\n")
+
 if __name__ == "__main__":
 	main()
